@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 519420034}
   - component: {fileID: 519420033}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -298,174 +299,19 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!1001 &685989296
-PrefabInstance:
+--- !u!114 &519420036
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929884, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_Name
-      value: TeddyBear (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6328f982256509f47836845c66c8d63b, type: 3}
---- !u!1001 &932398316
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929884, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_Name
-      value: TeddyBear (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6328f982256509f47836845c66c8d63b, type: 3}
---- !u!1001 &6107746281110902319
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929881, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107746279537929884, guid: 6328f982256509f47836845c66c8d63b, type: 3}
-      propertyPath: m_Name
-      value: TeddyBear
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6328f982256509f47836845c66c8d63b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b443461fa71442847aa1e84e4a6cd95b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabTeddyBear: {fileID: 6107746279537929884, guid: 6328f982256509f47836845c66c8d63b, type: 3}
+  YellowTeddyBear: {fileID: 21300000, guid: d5ce22ee505884d4ebb5ade746cd4fb3, type: 3}
+  GreenTeddyBear: {fileID: 21300000, guid: 09a5c8a4cfff397469884096463eb2a2, type: 3}
+  PurpleTeddyBear: {fileID: 21300000, guid: 7f380ae32e197d141b7d3462ce6bab14, type: 3}

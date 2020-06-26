@@ -19,7 +19,21 @@ namespace IfStatements
 
             // print appropriate message
 
-            if (answer == 1)
+            switch (answer)
+            {
+                case 1:
+                    Console.WriteLine("You have the shine thing");
+                    break;
+                case 2:
+                    Console.WriteLine("You don't have the shine thing");
+                    break;
+                default:
+                    Console.WriteLine("Invalid number!");
+                    break;
+
+            }
+
+            /*if (answer == 1)
             {
                 Console.WriteLine("You have the shine thing");
             }
@@ -30,8 +44,7 @@ namespace IfStatements
             else
             {
                 Console.WriteLine("Invalid number!");
-            }
-
+            }*/
             Console.WriteLine();
         }
     }
