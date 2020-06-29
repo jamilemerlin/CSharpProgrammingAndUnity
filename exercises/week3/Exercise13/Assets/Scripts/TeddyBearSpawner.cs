@@ -11,15 +11,11 @@ public class TeddyBearSpawner : MonoBehaviour
 {
     // needed for spawning
     [SerializeField]
-    GameObject prefabTeddyBear;
-
-    // saved for efficiency
+    GameObject prefabYellowTeddyBear;
     [SerializeField]
-    Sprite YellowTeddyBear;
+    GameObject prefabGreenTeddyBear;
     [SerializeField]
-    Sprite GreenTeddyBear;
-    [SerializeField]
-    Sprite PurpleTeddyBear;
+    GameObject prefabPurpleTeddyBear;
 
     //spawn control
     const float MinSpawnDelay = 0.5f;
@@ -50,7 +46,6 @@ public class TeddyBearSpawner : MonoBehaviour
         spawnTimer = gameObject.AddComponent<Timer>();
         spawnTimer.Duration = Random.Range(MinSpawnDelay, MaxSpawnDelay);
         spawnTimer.Run();
-        
     }
 
     /// <summary>
@@ -67,7 +62,6 @@ public class TeddyBearSpawner : MonoBehaviour
             spawnTimer.Duration = Random.Range(MinSpawnDelay, MaxSpawnDelay);
             spawnTimer.Run();
         }
-        
     }
 
     void SpawnBear()
@@ -77,24 +71,23 @@ public class TeddyBearSpawner : MonoBehaviour
             Random.Range(minSpawnY, maxSpawnY),
             -Camera.main.transform.position.z);
         Vector3 worldLocation = Camera.main.ScreenToWorldPoint(location);
-        GameObject teddyBear = Instantiate(prefabTeddyBear) as GameObject;
-        teddyBear.transform.position = worldLocation;
 
-        // set random sprite for new teddy bear
-        SpriteRenderer spriteRenderer = teddyBear.GetComponent<SpriteRenderer>();
-        int spriteNumber = Random.Range(0, 3);
-        if (spriteNumber == 0)
+        // spawn random prefab
+        int prefabNumber = Random.Range(0, 3);
+        /*int prefabNumber = 0;*/
+        if (prefabNumber == 0)
         {
-            spriteRenderer.sprite = YellowTeddyBear;
+            GameObject teddyBear = Instantiate<GameObject>(prefabYellowTeddyBear, 
+                worldLocation, Quaternion.identity);
+            teddyBear.tag = "C4TeddyBear";
         }
-        else if (spriteNumber == 1)
+        else if (prefabNumber == 1)
         {
-            spriteRenderer.sprite = GreenTeddyBear;
+            Instantiate<GameObject>(prefabGreenTeddyBear, worldLocation, Quaternion.identity);
         }
         else
         {
-            spriteRenderer.sprite = PurpleTeddyBear;
+            Instantiate<GameObject>(prefabPurpleTeddyBear, worldLocation, Quaternion.identity);
         }
     }
-
 }
