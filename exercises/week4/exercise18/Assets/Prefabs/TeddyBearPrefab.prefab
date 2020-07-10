@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 9170661773838098557}
   - component: {fileID: 495912133280790919}
   - component: {fileID: -6332754704345632723}
+  - component: {fileID: -5079136762078802725}
   - component: {fileID: 2905008734660155514}
   m_Layer: 0
-  m_Name: teddybear
+  m_Name: TeddyBearPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,6 +95,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9291d50a19b3fdd4eb6f4edc512eca70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5079136762078802725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4167778845493058260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3197c040718cc4baa71ebec107d145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &2905008734660155514
