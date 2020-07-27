@@ -8,7 +8,7 @@ using UnityEngine;
 public class Jumper : MonoBehaviour
 {
     // Update is called once per frame
-    void Update()
+   /* void Update()
     {
         if (Input.GetMouseButtonDown(1))
         {
@@ -20,5 +20,5 @@ public class Jumper : MonoBehaviour
             // jump to mouse position
             transform.position = position;
         }
-    }
+    }*/
 }

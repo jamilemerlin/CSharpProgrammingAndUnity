@@ -23,7 +23,7 @@ public class Character : MonoBehaviour
     /// <summary>
     /// Update is called once per frame
     /// </summary>
-    /*void Update()
+    void Update()
     {
         // convert a mouse position to world position
         Vector3 position = Input.mousePosition;
@@ -32,7 +32,7 @@ public class Character : MonoBehaviour
 
         // move to mouse position
         transform.position = position;
-        ClampInScreen();    
+        ClampInScreen();
     }
 
     /// <summary>
@@ -60,5 +60,5 @@ public class Character : MonoBehaviour
             position.y = ScreenUtils.ScreenBottom + colliderHalfHeight;
         }
         transform.position = position;
-    }*/
+    }
 }

@@ -12,6 +12,9 @@ public class CharacterChanger : MonoBehaviour
     // need for a location of new character
     GameObject currentCharacter;
 
+    // first frame input support
+    bool previousFrameChangeCharacterInput = false;
+
     // identify the character
     bool teddyIsBurning = false;
 
@@ -30,24 +33,34 @@ public class CharacterChanger : MonoBehaviour
     void Update()
     {
         //change character on left mouse buttom 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetAxis("ChangeCharacter") > 0)
         {
-            // save current position and destroy current character
-            Vector3 position = currentCharacter.transform.position;
-            Destroy(currentCharacter);
+            // only change character on first input frame
+            if (!previousFrameChangeCharacterInput)
+            {
+                previousFrameChangeCharacterInput = true;
+                // save current position and destroy current character
+                Vector3 position = currentCharacter.transform.position;
+                Destroy(currentCharacter);
 
-            // selecting the new character
-            this.teddyIsBurning = !this.teddyIsBurning;
-            if (this.teddyIsBurning)
-            {
-                currentCharacter = Instantiate(
-                    BurningTeddyPrefab, position, Quaternion.identity);
+                // selecting the new character
+                this.teddyIsBurning = !this.teddyIsBurning;
+                if (this.teddyIsBurning)
+                {
+                    currentCharacter = Instantiate(
+                        BurningTeddyPrefab, position, Quaternion.identity);
+                }
+                else
+                {
+                    currentCharacter = Instantiate(
+                        TeddyBearPrefab, position, Quaternion.identity);
+                }
             }
-            else
-            {
-                currentCharacter = Instantiate(
-                    TeddyBearPrefab, position, Quaternion.identity);
-            }
+        }
+        else
+        {
+            // no change character input
+            previousFrameChangeCharacterInput = false;
         }
     }
 }
