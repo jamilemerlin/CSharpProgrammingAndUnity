@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Asteroid : MonoBehaviour
+public class EnemyPrefab : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        // get the Asteroid moving
+        // get the Enemy moving
         GetComponent<Rigidbody2D>().AddForce(
             new Vector2(5, 0),
             ForceMode2D.Impulse);
@@ -16,6 +16,10 @@ public class Asteroid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }
