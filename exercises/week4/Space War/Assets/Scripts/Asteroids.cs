@@ -21,10 +21,6 @@ public class Asteroids : MonoBehaviour
     [SerializeField]
     GameObject AsteroidFivePrefab;
 
-    // spawn control
-    const float MinSpawnDelay = 1;
-    const float MaxSpawnDelay = 2;
-      
     // spawn location support
 
     float SpawnBorderSize = 100;
@@ -64,7 +60,7 @@ public class Asteroids : MonoBehaviour
         GameObject asteroids = Instantiate(randomAsteroids) as GameObject;
         asteroids.transform.position = worldLocation;
         asteroids.transform.RotateAround(Vector3.zero, new Vector3(0, 0, 1), Random.Range(0, 360));
-        asteroids.GetComponent<Rigidbody2D>().AddForce(new Vector3(Random.Range(-8, 8), 0, 0) - asteroids.transform.position * Random.Range(0.0f, 0.8f), ForceMode2D.Impulse);
+        asteroids.GetComponent<Rigidbody2D>().AddForce(new Vector3(Random.Range(-8, 8), 0, 0) - asteroids.transform.position * Random.Range(0.1f, 0.8f), ForceMode2D.Impulse);
     }
 
     IEnumerator SpawnRandomAsteroids()

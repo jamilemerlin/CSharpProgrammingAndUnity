@@ -11,6 +11,7 @@ public class Ship : MonoBehaviour
     Rigidbody2D rigidbodyShip;
     Vector2 thrustDirection = new Vector2(0, 1);
     const float ThrustForce = 15;
+    const float maxVelocity = 5;
     const float RotateDegreesPerSecond = 120;
 
 
@@ -52,6 +53,7 @@ public class Ship : MonoBehaviour
         if (Input.GetAxis("Thrust") != 0)
         {
             rigidbodyShip.AddForce(ThrustForce * thrustDirection, ForceMode2D.Force);
+            rigidbodyShip.velocity = Vector3.ClampMagnitude(rigidbodyShip.velocity, maxVelocity);
         }
     }
 
