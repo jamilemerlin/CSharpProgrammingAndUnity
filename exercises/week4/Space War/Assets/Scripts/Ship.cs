@@ -13,7 +13,11 @@ public class Ship : MonoBehaviour
     const float ThrustForce = 15;
     const float maxVelocity = 5;
     const float RotateDegreesPerSecond = 120;
-
+    public GameObject missilePrefab;
+    public GameObject missileR;
+    public GameObject missileL;
+    const float fireRate = 0.3f;
+    bool canShoot = true;
 
     // screen support
     float circleCollider;
@@ -55,9 +59,32 @@ public class Ship : MonoBehaviour
             rigidbodyShip.AddForce(ThrustForce * thrustDirection, ForceMode2D.Force);
             rigidbodyShip.velocity = Vector3.ClampMagnitude(rigidbodyShip.velocity, maxVelocity);
         }
+
+        if (Input.GetAxis("Fire") != 0 && canShoot)
+        {
+            StartCoroutine(missileControl());
+        }
+
     }
 
+    // instantiate missile and control them
+    IEnumerator missileControl()
+    {
+        GameObject missileRight = Instantiate<GameObject>(missilePrefab);
+        GameObject missileLeft = Instantiate<GameObject>(missilePrefab);
 
+        missileRight.transform.position = this.missileR.transform.position;
+        missileLeft.transform.position = this.missileL.transform.position;
+
+        missileRight.transform.rotation = this.missileR.transform.rotation;
+        missileLeft.transform.rotation = this.missileL.transform.rotation;
+
+        canShoot = false;
+        yield return new WaitForSeconds(fireRate);
+        canShoot = true;
+    }
+
+   
     /// <summary>
     /// Called when the game object becomes invisible to the camera
     /// </summary>
