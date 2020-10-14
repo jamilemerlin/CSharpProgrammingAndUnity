@@ -4,30 +4,20 @@ using UnityEngine;
 
 public class Missile : MonoBehaviour
 {
-    // saved to support
-    public static Missile instance;
-    public float velocity = 5.0f;
+    public static Missile instance;  // Configured in the Prefab (UI)
+    public float velocityMissile;  // Configured in the Prefab (UI)
     private Rigidbody2D rbMissile;
-    private Vector2 screenBounds;
+    Vector2 thrustDirection = new Vector2();
+    
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
-    }
+        rbMissile = GetComponent<Rigidbody2D>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        rbMissile = this.GetComponent<Rigidbody2D>();
-        rbMissile.velocity = rbMissile.transform.position * velocity;
-        //rbMissile.AddForce(new Vector3(0.1f, 0.1f, 1 * velocity * Time.deltaTime));
-        //screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-    }
-
-    void FixedUpdate()
-    {
-       
+        float RotationZ = (transform.eulerAngles.z + 90) * Mathf.Deg2Rad;
+        thrustDirection.x = Mathf.Cos(RotationZ);
+        thrustDirection.y = Mathf.Sin(RotationZ);
+        rbMissile.velocity = thrustDirection * velocityMissile;
     }
 
     // Destroy gameobject when it go out the screen
